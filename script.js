@@ -151,11 +151,17 @@ window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
 /* ---------- Menu mobile ---------- */
-$("#menu-btn")?.addEventListener("click", e => {
-  const open = document.body.classList.toggle("menu-open");
+const menuBtn = $("#menu-btn");
+function setMenu(open) {
+  document.body.classList.toggle("menu-open", open);
   nav.classList.toggle("menu-open", open);
-  e.currentTarget.setAttribute("aria-expanded", open);
-});
+  if (open) nav.classList.remove("hidden");
+  menuBtn.setAttribute("aria-expanded", open);
+}
+menuBtn?.addEventListener("click", () => setMenu(!document.body.classList.contains("menu-open")));
+document.addEventListener("keydown", e => { if (e.key === "Escape" && menuBtn) setMenu(false); });
+// Au retour arrière sur une page, le menu doit être refermé.
+window.addEventListener("pageshow", () => { if (menuBtn) setMenu(false); });
 
 /* ---------- Transition entre les pages ---------- */
 document.addEventListener("click", e => {

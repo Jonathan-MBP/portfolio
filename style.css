@@ -758,6 +758,12 @@ a.contact-card:hover .go { transform: translate(4px, -4px); color: var(--accent)
     transition: clip-path 0.7s var(--ease);
   }
   .menu-open nav { clip-path: circle(150% at calc(100% - 2.5rem) 2.5rem); }
+  /* backdrop-filter et transform sur la barre "piègent" le menu plein écran dans la barre :
+     on les retire tant que le menu est ouvert pour qu'il couvre bien tout l'écran. */
+  .nav.menu-open,
+  .nav.menu-open.scrolled { backdrop-filter: none; -webkit-backdrop-filter: none; transform: none; background: transparent; border-color: transparent; }
+  .nav nav { height: 100vh; height: 100dvh; }
+  body.menu-open { overflow: hidden; }
   .nav nav a { font-size: 1.8rem; font-weight: 700; }
   .menu-open { color: var(--text); }
   .tiles { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
