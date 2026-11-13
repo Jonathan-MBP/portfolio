@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="sombre">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Politique de sécurité : seules les ressources du site lui-même sont autorisées -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Parcours de Beni Jonathan Mbongo, étudiant ingénieur en cybersécurité à l'ECE Paris.">
+  <title>À propos – Beni Jonathan Mbongo</title>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header class="nav" id="nav">
+    <a class="logo" href="index.html"><span class="logo-mark">JM</span>Jonathan Mbongo</a>
+    <nav aria-label="Navigation principale">
+      <a href="apropos.html" aria-current="page">À propos</a>
+      <a href="competences.html">Compétences</a>
+      <a href="projets.html">Projets</a>
+      <a href="homelab.html">Homelab</a>
+      <a href="contact.html">Contact</a>
+      <button id="theme-btn" class="theme-btn" type="button" aria-label="Basculer thème clair / sombre"><svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    </nav>
+    <button id="menu-btn" class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main>
+<section class="page-hero">
+      <img class="page-hero-img" data-parallax="0.25" src="assets/images/fond/ville-nuit.jpg" alt="">
+      <div class="container">
+        <p class="eyebrow reveal">01 — À propos</p>
+        <h1 class="split-words">Qui je suis.</h1>
+        <p class="lead reveal">Beni Jonathan Mbongo, étudiant ingénieur en cybersécurité, systèmes et développement logiciel.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <p class="eyebrow reveal">Profil</p>
+          <h2 class="split-words">Passionné par la sécurité des systèmes d'information.</h2>
+          <p class="lead reveal">Étudiant en 3ᵉ année de Bachelor Informatique à l'ECE Paris, spécialisé en cybersécurité. J'allie une solide compréhension du développement logiciel sécurisé (OWASP, RBAC, cryptographie), de l'analyse de données (ETL Python, FastAPI, SQLite/MongoDB) et des infrastructures (Linux, Docker, SIEM ELK, réseaux Cisco).</p>
+          <p class="muted reveal">Mon parcours a commencé à Brazzaville, avec une licence en réseaux informatiques puis une formation au CFI CIRAS, avant de rejoindre l'ECE Paris en 2025.</p>
+        </div>
+        <div class="media-frame clip-reveal">
+          <img data-parallax="0.12" src="assets/images/apropos/bureau.jpg" alt="Bureau avec ordinateur" loading="lazy">
+          <span class="media-tag">Massy, Île-de-France</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <p class="eyebrow reveal">Formation</p>
+          <h2 class="split-words">Mon parcours académique.</h2>
+        </div>
+        <ol class="timeline" data-stagger>
+          <li><span class="when">Mars 2025 – aujourd'hui</span><strong>Bachelor Informatique – 3ᵉ année · ECE Paris</strong><p>Cybersécurité, développement logiciel, data &amp; IA, systèmes &amp; réseaux.</p></li>
+          <li><span class="when">Sept. 2024 – Fév. 2025</span><strong>CFI CIRAS – Centre de Formation en Informatique</strong><p>Brazzaville, Congo · Bases de données relationnelles, programmation C++, réseaux Cisco.</p></li>
+          <li><span class="when">Déc. 2023 – Sept. 2024</span><strong>Licence 1 – Réseaux informatiques</strong><p>Institut de Management de Brazzaville · Architecture des ordinateurs, télécoms, mathématiques.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container">
+        <p class="eyebrow reveal">Langues</p>
+        <div class="contact-grid" data-stagger>
+          <div class="contact-card"><div class="panel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div><span class="contact-label">Français</span><span class="contact-value">Langue maternelle</span></div>
+          <div class="contact-card"><div class="panel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div><span class="contact-label">Anglais</span><span class="contact-value">B1 · opérationnel technique</span><span class="cert-date">En progression continue</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="panel reveal">
+          <p class="eyebrow">Ce que je cherche</p>
+          <h2>Une alternance de 1 à 2 ans.</h2>
+          <p class="lead">En sécurité opérationnelle, gestion des vulnérabilités ou ingénierie système, pour m'investir sur des projets d'envergure. Disponible immédiatement, basé à Massy (Île-de-France).</p>
+          <div class="actions">
+            <a class="btn primary" href="contact.html">Me contacter <span class="arrow">→</span></a>
+            <a class="btn" href="projets.html">Voir mes projets</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-cta">
+        <p class="eyebrow reveal">Une alternance, une question sur un projet ?</p>
+        <a class="footer-big reveal" href="contact.html">Parlons-en <span>→</span></a>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Beni Jonathan Mbongo · Site statique, sans cookies ni traceurs.</span>
+        <div class="footer-links">
+          <a href="https://github.com/Jonathan-MBP" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/beni-mbongo-pea-303453352/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

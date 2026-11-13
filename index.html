@@ -1,85 +1,121 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="sombre">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Politique de sécurité : seules les ressources du site lui-même sont autorisées -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="description" content="Portfolio de Jonathan – étudiant en cybersécurité">
-  <title>Jonathan – Cybersécurité</title>
+  <meta name="description" content="Portfolio de Beni Jonathan Mbongo – étudiant ingénieur en cybersécurité à l'ECE Paris, à la recherche d'une alternance.">
+  <title>Beni Jonathan Mbongo – Cybersécurité</title>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav">
-    <span class="logo">jonathan@portfolio:~$</span>
-    <nav>
-      <a href="#about">À propos</a>
-      <a href="#skills">Compétences</a>
-      <a href="#projects">Projets</a>
-      <a href="#lab">Homelab</a>
-      <a href="#contact">Contact</a>
+  <div class="progress" id="progress"></div>
+
+  <header class="nav" id="nav">
+    <a class="logo" href="index.html"><span class="logo-mark">JM</span>Jonathan Mbongo</a>
+    <nav aria-label="Navigation principale">
+      <a href="apropos.html">À propos</a>
+      <a href="competences.html">Compétences</a>
+      <a href="projets.html">Projets</a>
+      <a href="homelab.html">Homelab</a>
+      <a href="contact.html">Contact</a>
+      <button id="theme-btn" class="theme-btn" type="button" aria-label="Basculer thème clair / sombre"><svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
     </nav>
+    <button id="menu-btn" class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
   </header>
 
   <main>
-    <section class="hero">
-      <h1>Jonathan</h1>
-      <p class="tagline">Étudiant en cybersécurité – [école, année]. Je cherche [stage / alternance] à partir de [date].</p>
+<section class="hero">
+      <img class="hero-media" src="assets/images/accueil/hero.jpg" alt="">
+      <canvas id="network" aria-hidden="true"></canvas>
+      <div class="container hero-content">
+        <p class="eyebrow reveal">Étudiant ingénieur · Cybersécurité · ECE Paris</p>
+        <h1 class="split-words">Sécuriser les systèmes, <span class="accent">du code jusqu'au SIEM.</span></h1>
+        <p class="typed-line reveal">Je travaille sur : <span id="typed"></span><span class="caret"></span></p>
+        <div class="actions reveal">
+          <a class="btn primary" href="projets.html">Voir mes projets <span class="arrow">→</span></a>
+          <a class="btn" href="contact.html">Me contacter</a>
+        </div>
+        <p class="available reveal">Disponible immédiatement · Alternance de 1 à 2 ans</p>
+      </div>
+      <div class="scroll-hint" aria-hidden="true"></div>
     </section>
 
-    <section id="about">
-      <h2>À propos</h2>
-      <p>[2 à 3 phrases : ton parcours, ce qui t'a amené à la cyber, ce que tu vises (pentest, SOC, GRC...).]</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track"><span>SIEM ELK</span><span>OWASP Top 10</span><span>EBIOS RM</span><span>Docker</span><span>FastAPI</span><span>Cisco</span><span>GitHub Actions</span><span>Wireshark</span><span>Linux</span><span>Python</span><span>SIEM ELK</span><span>OWASP Top 10</span><span>EBIOS RM</span><span>Docker</span><span>FastAPI</span><span>Cisco</span><span>GitHub Actions</span><span>Wireshark</span><span>Linux</span><span>Python</span></div>
+    </div>
+
+    <section class="section">
+      <div class="container split">
+        <div class="media-frame clip-reveal">
+          <img data-parallax="0.12" src="assets/images/apropos/programmeur.jpg" alt="Développeur au travail sur son ordinateur" loading="lazy">
+          <span class="media-tag">Massy, Île-de-France</span>
+        </div>
+        <div>
+          <p class="eyebrow reveal">À propos</p>
+          <h2 class="split-words">Polyvalent, entre code, données et infrastructure.</h2>
+          <p class="lead reveal">Étudiant en 3ᵉ année de Bachelor Informatique à l'ECE Paris, spécialisé en cybersécurité. J'allie développement logiciel sécurisé, analyse de données et infrastructures, et je cherche une alternance en sécurité opérationnelle, gestion des vulnérabilités ou ingénierie système.</p>
+          <div class="stats" data-stagger>
+            <div class="stat"><strong data-count="projects">0</strong><span>projets réalisés</span></div>
+            <div class="stat"><strong data-count="6">0</strong><span>certifications</span></div>
+            <div class="stat"><strong data-count="3">0</strong><span>ans de formation</span></div>
+          </div>
+          <div class="actions reveal"><a class="link-arrow" href="apropos.html">En savoir plus <span>→</span></a></div>
+        </div>
+      </div>
     </section>
 
-    <section id="skills">
-      <h2>Compétences</h2>
-      <p class="hint">Ne liste que ce que tu peux prouver par un projet ci-dessous.</p>
-      <ul class="tags">
-        <li>Linux</li>
-        <li>Réseau (TCP/IP)</li>
-        <li>PHP / SQL</li>
-        <li>JavaScript / Node.js</li>
-        <li>Python</li>
-        <li>C</li>
-      </ul>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal">Sélection</p>
+            <h2 class="split-words">Projets à la une</h2>
+          </div>
+          <a class="link-arrow reveal" href="projets.html">Tous les projets <span>→</span></a>
+        </div>
+        <div id="featured-grid" class="grid"></div>
+      </div>
     </section>
 
-    <section id="projects">
-      <h2>Projets</h2>
-      <article class="card">
-        <h3>Audit de sécurité – plateforme PHP</h3>
-        <p class="status">En cours</p>
-        <p>[Contexte] → [Failles trouvées : SQLi, XSS, upload, contrôle d'accès] → [Corrections] → [Ce que j'ai appris]</p>
-        <a href="#">Writeup</a>
-      </article>
-      <article class="card">
-        <h3>[Projet 2]</h3>
-        <p class="status">Terminé</p>
-        <p>[Problème → ce que tu as fait → résultat]</p>
-        <a href="#">Code</a>
-      </article>
-    </section>
-
-    <section id="lab">
-      <h2>Homelab</h2>
-      <p class="status">En construction</p>
-      <p>[Architecture, machines, objectifs d'attaque/défense. Mise à jour au fil de l'avancement.]</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        <a href="https://github.com/Jonathan-MBP" rel="noopener noreferrer" target="_blank">GitHub</a> ·
-        <a href="#" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-      </p>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow reveal">Explorer</p>
+        <h2 class="split-words">Tout le reste</h2>
+        <div class="tiles" data-stagger>
+          <a class="tile" href="apropos.html"><img src="assets/images/apropos/bureau.jpg" alt="" loading="lazy"><div class="tile-body"><span class="tile-num">01</span><h3>À propos</h3><p>Mon parcours, de Brazzaville à l'ECE Paris.</p></div></a>
+          <a class="tile" href="competences.html"><img src="assets/images/competences/macro-code.jpg" alt="" loading="lazy"><div class="tile-body"><span class="tile-num">02</span><h3>Compétences</h3><p>SOC, sécurité applicative, réseaux, dev.</p></div></a>
+          <a class="tile" href="homelab.html"><img src="assets/images/homelab/raspberry-switch.jpg" alt="" loading="lazy"><div class="tile-body"><span class="tile-num">03</span><h3>Homelab</h3><p>Mon labo d'attaque et de défense.</p></div></a>
+          <a class="tile" href="contact.html"><img src="assets/images/contact/cafe-telephone.jpg" alt="" loading="lazy"><div class="tile-body"><span class="tile-num">04</span><h3>Contact</h3><p>E-mail, téléphone, GitHub…</p></div></a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>Site statique, sans cookies ni traceurs. Dernière mise à jour : <span id="year"></span>.</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-cta">
+        <p class="eyebrow reveal">Une alternance, une question sur un projet ?</p>
+        <a class="footer-big reveal" href="contact.html">Parlons-en <span>→</span></a>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Beni Jonathan Mbongo · Site statique, sans cookies ni traceurs.</span>
+        <div class="footer-links">
+          <a href="https://github.com/Jonathan-MBP" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/beni-mbongo-pea-303453352/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <dialog id="project-dialog" class="dialog">
+    <button class="close" type="button" aria-label="Fermer">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
 
   <script src="script.js"></script>
 </body>
